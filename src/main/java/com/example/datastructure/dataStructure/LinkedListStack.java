@@ -36,8 +36,31 @@ public class LinkedListStack {
         public void pop() {
             top = top.getNextNode(); // 현재 top이 가리키고 있는 노드를 가리키게 함
         }
+
         public int peek() {
             return top.getData();
+        }
+
+        private int search(int item) {
+            Node searchNode = top;
+            int index = 1;
+            while(true) {
+                if (searchNode.getData() == item) {
+                    System.out.println("Index Number Is " + index + "!");
+                    return index;
+                } else {
+                    searchNode = searchNode.getNextNode();
+                    index ++;
+                    if (searchNode == null)
+                        break;
+                }
+            }
+            return -1;
+        }
+
+        private boolean empty() {
+            System.out.println("Result is " + (top == null));
+            return top == null;
         }
     }
 }
