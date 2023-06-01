@@ -50,6 +50,28 @@ class LinkedListStackTest {
             System.out.println(top.getData() + " Peek!");
             return top.getData();
         }
+
+        private int search(int item) {
+            Node searchNode = top;
+            int index = 1;
+            while(true) {
+                if (searchNode.getData() == item) {
+                    System.out.println("Index Number Is " + index + "!");
+                    return index;
+                } else {
+                    searchNode = searchNode.getNextNode();
+                    index ++;
+                    if (searchNode == null)
+                        break;
+                }
+            }
+            return -1;
+        }
+
+        private boolean empty() {
+            System.out.println("Result is " + (top == null));
+            return top == null;
+        }
     }
 
 
@@ -63,5 +85,7 @@ class LinkedListStackTest {
         nodeManager.pop();
         nodeManager.peek();
         nodeManager.peek();
+        nodeManager.search(10);
+        nodeManager.empty();
     }
 }
