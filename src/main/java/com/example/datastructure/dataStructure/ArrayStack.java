@@ -24,4 +24,19 @@ public class ArrayStack {
     public void peek() {
         System.out.println(stack[top] + " Peek!");
     }
+
+    public int search(int num) {
+        for (int i = 0; i <= top; i++) {
+            if (stack[i] == num) {
+                System.out.println("Index Number Is " + ((top - i) + 1) + "!");
+                return (top - i) + 1;
+            }
+        }
+        return -1;
+    }
+
+    public boolean empty() {
+        System.out.println("Result is " + (size == 0));
+        return size == 0;
+    }
 }
