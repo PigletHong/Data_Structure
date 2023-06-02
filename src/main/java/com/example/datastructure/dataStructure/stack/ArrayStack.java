@@ -1,4 +1,4 @@
-package com.example.datastructure.dataStructure;
+package com.example.datastructure.dataStructure.stack;
 
 public class ArrayStack {
     int top;    //인덱스

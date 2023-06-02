@@ -1,4 +1,4 @@
-package com.example.datastructure.dataStructure;
+package com.example.datastructure.dataStructure.stack;
 
 import org.junit.jupiter.api.Test;
 
